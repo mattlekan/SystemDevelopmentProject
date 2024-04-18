@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>TB Screening Survey</title>
+</head>
+<body id="surveyForm">
+    <form id="tbSurveyForm" method="post" action="http://localhost:3000/submitData">
+    <div class="container border rounded-5 shadow p-3 mb-5 bg-body-tertiary">
+        <h2 id="surveyHeader">TB Screening Survey</h2>
+        <div id="q1">
+            <label for="stuName">Student Name:</label>
+            <input type="text" id="stuName" name="name">
+        </div><br>
+        <div id="q2">
+            <label for="stuIDNumber">University of Akron Student ID number:</label>
+            <input type="number" id="idNumber">
+        </div><br>
+        <div id="q3">
+            <label for="birthCountry">What Country were you born in?</label>
+            <input type="text" id="birthCountry" required>
+        </div><br>
+        <div class="form" id="q4">
+            <p>Have you ever had close contact with a person/people who have Active TB or are suspected of having Active TB?</p>
+            <input type="radio" id="yes" name="contact1" value="yes" class="form-check-input">
+            <label for="yes" class="form-check-label">Yes</label><br>
+            <input type="radio" id="no" name="contact1" value="no" class="form-check-input">
+            <label for="no" class="form-check-label">No</label>
+        </div><br>
+        <div class="form" id="q5">
+            <p>Have you been in close contact with someone diagnosed with TB?</p>
+            <input type="radio" id="yes" name="contact2" value="Yes" class="form-check-input">
+            <label for="yes" class="form-check-label">Yes</label><br>
+            <input type="radio" id="no" name="contact2" value="No" class="form-check-input">
+            <label for="no" class="form-check-label">No</label><br>
+        </div><br>
+
+        <!-- Question 6 -->
+        <div class="row">
+            <p>Were you born in one of the countries or territories listed below? If your answer is YES, select the checkbox next to the country or territory name.<br>If your answer is NO, select the checkbox for NONE OF THE ABOVE at end of the list.</p>
+            <div id="countryList" class="form-check col">
+                <input type="checkbox" name="countries[]" value="afghanistan" class="form-check-input">
+                <label for="afghanistan" class="form-check-label">Afghanistan</label><br>
+                <input type="checkbox" name="countries[]" value="algeria" class="form-check-input">
+                <label for="algeria" class="form-check-label">Algeria</label><br>
+                <input type="checkbox" name="countries[]" value="angola" class="form-check-input">
+                <label for="angola" class="form-check-label">Angola</label><br>
+                <input type="checkbox" name="countries[]" value="anguilla" class="form-check-input">
+                <label for="anguilla" class="form-check-label">Anguilla</label><br>
+                <input type="checkbox" name="countries[]" value="argentina" class="form-check-input">
+                <label for="argentina" class="form-check-label">Argentina</label><br>
+                <input type="checkbox" name="countries[]" value="armenia" class="form-check-input">
+                <label for="armenia" class="form-check-label">Armenia</label><br>
+                <input type="checkbox" name="countries[]" value="azerbaijan" class="form-check-input">
+                <label for="azerbaijan" class="form-check-label">Azerbaijan</label><br>
+                <input type="checkbox" name="countries[]" value="bangladesh" class="form-check-input">
+                <label for="bangladesh" class="form-check-label">Bangladesh</label><br>
+                <input type="checkbox" name="countries[]" value="belarus" class="form-check-input">
+                <label for="belarus" class="form-check-label">Belarus</label><br>
+                <input type="checkbox" name="countries[]" value="belize" class="form-check-input">
+                <label for="belize" class="form-check-label">Belize</label><br>
+                <input type="checkbox" name="countries[]" value="benin" class="form-check-input">
+                <label for="benin" class="form-check-label">Benin</label><br>
+                <input type="checkbox" name="countries[]" value="bhutan" class="form-check-input">
+                <label for="bhutan" class="form-check-label">Bhutan</label><br>
+                <input type="checkbox" name="countries[]" value="bolivia" class="form-check-input">
+                <label for="bolivia" class="form-check-label">Bolivia</label><br>
+                <input type="checkbox" name="countries[]" value="bosnia/herzegovina" class="form-check-input">
+                <label for="bosnia/herzegovina" class="form-check-label">Bosnia and Herzegovina</label><br>
+                <input type="checkbox" name="countries[]" value="botswana" class="form-check-input">
+                <label for="botswana" class="form-check-label">Botswana</label><br>
+                <input type="checkbox" name="countries[]" value="brazil" class="form-check-input">
+                <label for="brazil" class="form-check-label">Brazil</label><br>
+                <input type="checkbox" name="countries[]" value="bruneiDarussalam" class="form-check-input">
+                <label for="brunieDarussalam" class="form-check-label">Brunie Darussalam</label><br>
+                <input type="checkbox" name="countries[]" value="burkinaFaso" class="form-check-input">
+                <label for="burkinaFaso" class="form-check-label">Burkina Faso</label><br>
+                <input type="checkbox" name="countries[]" value="burundi" class="form-check-input">
+                <label for="burundi" class="form-check-label">Burundi</label><br>
+                <input type="checkbox" name="countries[]" value="caboVerde" class="form-check-input">
+                <label for="caboVerde" class="form-check-label">Cabo Verde</label><br>
+                <input type="checkbox" name="countries[]" value="cambodia" class="form-check-input">
+                <label for="cambodia" class="form-check-label">Cambodia</label><br>
+                <input type="checkbox" name="countries[]" value="cameroon" class="form-check-input">
+                <label for="cameroon" class="form-check-label">Cameroon</label><br>
+                <input type="checkbox" name="countries[]" value="centralAfrica" class="form-check-input">
+                <label for="centralAfrica" class="form-check-label">Central Africa</label><br>
+                <input type="checkbox" name="countries[]" value="republicChad" class="form-check-input">
+                <label for="republicChad" class="form-check-label">Republic Chad</label><br>
+                <input type="checkbox" name="countries[]" value="china" class="form-check-input">
+                <label for="china" class="form-check-label">China</label><br>
+                <input type="checkbox" name="countries[]" value="hongKongSAR" class="form-check-input">
+                <label for="hongKongSAR" class="form-check-label">China, Hong Kong SAR</label><br>
+                <input type="checkbox" name="countries[]" value="macaoSAR" class="form-check-input">
+                <label for="macaoSAR" class="form-check-label">China, Macao SAR</label><br>
+                <input type="checkbox" name="countries[]" value="colombia" class="form-check-input">
+                <label for="colombia" class="form-check-label">Colombia</label><br>
+                <input type="checkbox" name="countries[]" value="comoros" class="form-check-input">
+                <label for="comoros" class="form-check-label">Comoros</label><br>
+                <input type="checkbox" name="countries[]" value="congo" class="form-check-input">
+                <label for="congo" class="form-check-label">Congo</label><br>
+                <input type="checkbox" name="countries[]" value="coteD'lvoire" class="form-check-input">
+                <label for="coteD'lvoire" class="form-check-label">Cote d'lvoire</label><br>
+                <input type="checkbox" name="countries[]" value="democraticPeoplesRepublicOfKorea" class="form-check-input">
+                <label for="democraticPeoplesRepublicOfKorea" class="form-check-label">Democratic People's Republic of Korea</label><br>
+                <input type="checkbox" name="countries[]" value="democraticRepublicOfTheCongo" class="form-check-input">
+                <label for="democraticRepublicOfTheCongo" class="form-check-label">Democratic Republic of the Congo</label><br>
+                <input type="checkbox" name="countries[]" value="djibouti" class="form-check-input">
+                <label for="djibouti" class="form-check-label">Djibouti</label><br>
+                <input type="checkbox" name="countries[]" value="dominicanRepublic" class="form-check-input">
+                <label for="dominicanRepublic" class="form-check-label">Dominican Republic</label><br>
+            </div>
+            <div id="countryList" class="form-check col">
+                <input type="checkbox" name="countries[]" value="ecuador" class="form-check-input">
+                <label for="ecuador" class="form-check-label">Ecuador</label><br>
+                <input type="checkbox" name="countries[]" value="elSalvador" class="form-check-input">
+                <label for="elSalvador" class="form-check-label">El Salvador</label><br>
+                <input type="checkbox" name="countries[]" value="equatorialGuinea" class="form-check-input">
+                <label for="equatorialGuinea" class="form-check-label">Equatorial Guinea</label><br>
+                <input type="checkbox" name="countries[]" value="eritrea" class="form-check-input">
+                <label for="eritrea" class="form-check-label">Eritrea</label><br>
+                <input type="checkbox" name="countries[]" value="eswatini" class="form-check-input">
+                <label for="eswatini" class="form-check-label">Eswatini</label><br>
+                <input type="checkbox" name="countries[]" value="ethiopia" class="form-check-input">
+                <label for="ethiopia" class="form-check-label">Ethiopia</label><br>
+                <input type="checkbox" name="countries[]" value="fiji" class="form-check-input">
+                <label for="fiji" class="form-check-label">Fiji</label><br>
+                <input type="checkbox" name="countries[]" value="gabon" class="form-check-input">
+                <label for="gabon" class="form-check-label">Gabon</label><br>
+                <input type="checkbox" name="countries[]" value="gambia" class="form-check-input">
+                <label for="gambia" class="form-check-label">Gambia</label><br>
+                <input type="checkbox" name="countries[]" value="georgia" class="form-check-input">
+                <label for="georgia" class="form-check-label">Georgia</label><br>
+                <input type="checkbox" name="countries[]" value="ghana" class="form-check-input">
+                <label for="ghana" class="form-check-label">Ghana</label><br>
+                <input type="checkbox" name="countries[]" value="greenland" class="form-check-input">
+                <label for="greenland" class="form-check-label">Greenland</label><br>
+                <input type="checkbox" name="countries[]" value="guam" class="form-check-input">
+                <label for="guam" class="form-check-label">Guam</label><br>
+                <input type="checkbox" name="countries[]" value="guatemala" class="form-check-input">
+                <label for="guatemala" class="form-check-label">Guatemala</label><br>
+                <input type="checkbox" name="countries[]" value="guinea" class="form-check-input">
+                <label for="guinea" class="form-check-label">Guinea</label><br>
+                <input type="checkbox" name="countries[]" value="guineaBissau" class="form-check-input">
+                <label for="guineaBissau" class="form-check-label">Guinea Bissau</label><br>
+                <input type="checkbox" name="countries[]" value="guyana" class="form-check-input">
+                <label for="guyana" class="form-check-label">Guyana</label><br>
+                <input type="checkbox" name="countries[]" value="haiti" class="form-check-input">
+                <label for="haiti" class="form-check-label">Haiti</label><br>
+                <input type="checkbox" name="countries[]" value="honduras" class="form-check-input">
+                <label for="honduras" class="form-check-label">Honduras</label><br>
+                <input type="checkbox" name="countries[]" value="india" class="form-check-input">
+                <label for="india" class="form-check-label">India</label><br>
+                <input type="checkbox" name="countries[]" value="indonesia" class="form-check-input">
+                <label for="indonesia" class="form-check-label">Indonesia</label><br>
+                <input type="checkbox" name="countries[]" value="iraq">
+                <label for="iraq" class="form-check-label">Iraq</label><br>
+                <input type="checkbox" name="countries[]" value="kazakhstan" class="form-check-input">
+                <label for="kazakhstan" class="form-check-label">Kazakhstan</label><br>
+                <input type="checkbox" name="countries[]" value="kenya" class="form-check-input">
+                <label for="kenya" class="form-check-label">Kenya</label><br>
+                <input type="checkbox" name="countries[]" value="kiribai" class="form-check-input">
+                <label for="kiribai" class="form-check-label">Kiribai</label><br>
+                <input type="checkbox" name="countries[]" value="kuwait" class="form-check-input">
+                <label for="kuwait" class="form-check-label">Kuwait</label><br>
+                <input type="checkbox" name="countries[]" value="kyrgyzstan" class="form-check-input">
+                <label for="kyrgyzstan" class="form-check-label">Kyrgyzstan</label><br>
+                <input type="checkbox" name="countries[]" value="lao" class="form-check-input">
+                <label for="lao" class="form-check-label">Lao</label><br>
+                <input type="checkbox" name="countries[]" value="peoplesDemocraticRepublic" class="form-check-input">
+                <label for="peoplesDemocraticRepublic" class="form-check-label">People's Democratic Republic</label><br>
+                <input type="checkbox" name="countries[]" value="lesotho" class="form-check-input">
+                <label for="lesotho" class="form-check-label">Lesotho</label><br>
+                <input type="checkbox" name="countries[]" value="liberia" class="form-check-input">
+                <label for="liberia" class="form-check-label">Liberia</label><br>
+                <input type="checkbox" name="countries[]" value="libya">
+                <label for="libya" class="form-check-label">Libya</label><br>
+                <input type="checkbox" name="countries[]" value="lithuania" class="form-check-input">
+                <label for="lithuania" class="form-check-label">Lithuania</label><br>
+                <input type="checkbox" name="countries[]" value="madagascar" class="form-check-input">
+                <label for="madagascar" class="form-check-label">Madagascar</label><br>
+                <input type="checkbox" name="countries[]" value="malawi" class="form-check-input">
+                <label for="malawi" class="form-check-label">Malawi</label><br>
+                <input type="checkbox" name="countries[]" value="malaysia" class="form-check-input">
+                <label for="malaysia" class="form-check-label">Malaysia</label><br>
+            </div>
+            <div id="countryList" class="form-check col">
+                <input type="checkbox" name="countries[]" value="maldives" class="form-check-input">
+                <label for="maldives" class="form-check-label">Maldives</label><br>
+                <input type="checkbox" name="countries[]" value="mali" class="form-check-input">
+                <label for="mali" class="form-check-label">Mali</label><br>
+                <input type="checkbox" name="countries[]" value="marshallIsland" class="form-check-input">
+                <label for="marshallIsland" class="form-check-label">Marshall Island</label><br>
+                <input type="checkbox" name="countries[]" value="mauritania" class="form-check-input">
+                <label for="mauritania" class="form-check-label">Mauritania</label><br>
+                <input type="checkbox" name="countries[]" value="mexico" class="form-check-input">
+                <label for="mexico" class="form-check-label">Mexico</label><br>
+                <input type="checkbox" name="countries[]" value="micronesia" class="form-check-input">
+                <label for="micronesia" class="form-check-label">Micronesia</label><br>
+                <input type="checkbox" name="countries[]" value="mongolia" class="form-check-input">
+                <label for="mongolia" class="form-check-label">Mongolia</label><br>
+                <input type="checkbox" name="countries[]" value="morocco" class="form-check-input">
+                <label for="morocco" class="form-check-label">Morocco</label><br>
+                <input type="checkbox" name="countries[]" value="mozambique" class="form-check-input">
+                <label for="mozambique" class="form-check-label">Mozambique</label><br>
+                <input type="checkbox" name="countries[]" value="myanmar" class="form-check-input">
+                <label for="myanmar" class="form-check-label">Myanmar</label><br>
+                <input type="checkbox" name="countries[]" value="namibia" class="form-check-input">
+                <label for="namibia" class="form-check-label">Namibia</label><br>
+                <input type="checkbox" name="countries[]" value="nauru" class="form-check-input">
+                <label for="nauru" class="form-check-label">Nauru</label><br>
+                <input type="checkbox" name="countries[]" value="nepal" class="form-check-input">
+                <label for="nepal" class="form-check-label">Nepal</label><br>
+                <input type="checkbox" name="countries[]" value="nicaragua" class="form-check-input">
+                <label for="nicaragua" class="form-check-label">Nicaragua</label><br>
+                <input type="checkbox" name="countries[]" value="niger" class="form-check-input">
+                <label for="niger" class="form-check-label">Niger</label><br>
+                <input type="checkbox" name="countries[]" value="nigeria" class="form-check-input">
+                <label for="nigeria" class="form-check-label">Nigeria</label><br>
+                <input type="checkbox" name="countries[]" value="niue" class="form-check-input">
+                <label for="niue" class="form-check-label">Niue</label><br>
+                <input type="checkbox" name="countries[]" value="northernMarianaIslands" class="form-check-input">
+                <label for="northernMarianaIslands" class="form-check-label">Northern Mariana Islands</label><br>
+                <input type="checkbox" name="countries[]" value="pakistan" class="form-check-input">
+                <label for="pakistan" class="form-check-label">Pakistan</label><br>
+                <input type="checkbox" name="countries[]" value="palau" class="form-check-input">
+                <label for="palau" class="form-check-label">Palau</label><br>
+                <input type="checkbox" name="countries[]" value="panama" class="form-check-input">
+                <label for="panama" class="form-check-label">Panama</label><br>
+                <input type="checkbox" name="countries[]" value="papuaNewGuinea" class="form-check-input">
+                <label for="papuaNewGuinea" class="form-check-label">Papua New Guinea</label><br>
+                <input type="checkbox" name="countries[]" value="paraguay" class="form-check-input">
+                <label for="paraguay" class="form-check-label">Paraguay</label><br>
+                <input type="checkbox" name="countries[]" value="peru" class="form-check-input">
+                <label for="peru" class="form-check-label">Peru</label><br>
+                <input type="checkbox" name="countries[]" value="philippines" class="form-check-input">
+                <label for="philippines" class="form-check-label">Philippines</label><br>
+                <input type="checkbox" name="countries[]" value="qatar" class="form-check-input">
+                <label for="qatar" class="form-check-label">Qatar</label><br>
+                <input type="checkbox" name="countries[]" value="republicOfKorea" class="form-check-input">
+                <label for="republicOfKorea" class="form-check-label">Republic of Korea</label><br>
+                <input type="checkbox" name="countries[]" value="republicOfMoldova" class="form-check-input">
+                <label for="republicOfMoldova" class="form-check-label">Republic of Moldova</label><br>
+                <input type="checkbox" name="countries[]" value="romania" class="form-check-input">
+                <label for="romania" class="form-check-label">Romania</label><br>
+                <input type="checkbox" name="countries[]" value="russianFederation" class="form-check-input">
+                <label for="russianFederation" class="form-check-label">Russian Federation</label><br>
+                <input type="checkbox" name="countries[]" value="rwanda" class="form-check-input">
+                <label for="rwanda" class="form-check-label">Rwanda</label><br>
+                <input type="checkbox" name="countries[]" value="saoTomeAndPrincipe" class="form-check-input">
+                <label for="saoTomeAndPrincipe" class="form-check-label">Sao Tome and Principe</label><br>
+                <input type="checkbox" name="countries[]" value="senegal" class="form-check-input">
+                <label for="senegal" class="form-check-label">Senegal</label><br>
+                <input type="checkbox" name="countries[]" value="sierraLeone" class="form-check-input">
+                <label for="sierraLeone" class="form-check-label">Sierra Leone</label><br>
+                <input type="checkbox" name="countries[]" value="singapore" class="form-check-input">
+                <label for="singapore" class="form-check-label">Singapore</label><br>
+                <input type="checkbox" name="countries[]" value="none" class="form-check-input">
+                <label for="none" class="form-check-label">None of the Above</label><br>
+            </div>
+        </div><br>
+
+
+        <!-- Question 7 -->
+        <div class="row">
+            <p>Have you had frequent or prolonged visits (such as vacation, study, or work) to one or more of the countries or territories listed below?<br>
+                Frequent visits mean that you have traveled to a country or territory listed below greater than two time in the last year. A prolonged visit is a visit lasting 1 month or longer.
+                If your answer is YES, select the checkbox next to the country or territory name.
+                If your answer is NO, select the checkbox for NONE OF THE ABOVE at end of the list.</p>
+                <div id="countryList" class="form-check col">
+                    <input type="checkbox" name="countries[]" value="afghanistan" class="form-check-input">
+                    <label for="afghanistan" class="form-check-label">Afghanistan</label><br>
+                    <input type="checkbox" name="countries[]" value="algeria" class="form-check-input">
+                    <label for="algeria" class="form-check-label">Algeria</label><br>
+                    <input type="checkbox" name="countries[]" value="angola" class="form-check-input">
+                    <label for="angola" class="form-check-label">Angola</label><br>
+                    <input type="checkbox" name="countries[]" value="anguilla" class="form-check-input">
+                    <label for="anguilla" class="form-check-label">Anguilla</label><br>
+                    <input type="checkbox" name="countries[]" value="argentina" class="form-check-input">
+                    <label for="argentina" class="form-check-label">Argentina</label><br>
+                    <input type="checkbox" name="countries[]" value="armenia" class="form-check-input">
+                    <label for="armenia" class="form-check-label">Armenia</label><br>
+                    <input type="checkbox" name="countries[]" value="azerbaijan" class="form-check-input">
+                    <label for="azerbaijan" class="form-check-label">Azerbaijan</label><br>
+                    <input type="checkbox" name="countries[]" value="bangladesh" class="form-check-input">
+                    <label for="bangladesh" class="form-check-label">Bangladesh</label><br>
+                    <input type="checkbox" name="countries[]" value="belarus" class="form-check-input">
+                    <label for="belarus" class="form-check-label">Belarus</label><br>
+                    <input type="checkbox" name="countries[]" value="belize" class="form-check-input">
+                    <label for="belize" class="form-check-label">Belize</label><br>
+                    <input type="checkbox" name="countries[]" value="benin" class="form-check-input">
+                    <label for="benin" class="form-check-label">Benin</label><br>
+                    <input type="checkbox" name="countries[]" value="bhutan" class="form-check-input">
+                    <label for="bhutan" class="form-check-label">Bhutan</label><br>
+                    <input type="checkbox" name="countries[]" value="bolivia" class="form-check-input">
+                    <label for="bolivia" class="form-check-label">Bolivia</label><br>
+                    <input type="checkbox" name="countries[]" value="bosnia/herzegovina" class="form-check-input">
+                    <label for="bosnia/herzegovina" class="form-check-label">Bosnia and Herzegovina</label><br>
+                    <input type="checkbox" name="countries[]" value="botswana" class="form-check-input">
+                    <label for="botswana" class="form-check-label">Botswana</label><br>
+                    <input type="checkbox" name="countries[]" value="brazil" class="form-check-input">
+                    <label for="brazil" class="form-check-label">Brazil</label><br>
+                    <input type="checkbox" name="countries[]" value="bruneiDarussalam" class="form-check-input">
+                    <label for="brunieDarussalam" class="form-check-label">Brunie Darussalam</label><br>
+                    <input type="checkbox" name="countries[]" value="burkinaFaso" class="form-check-input">
+                    <label for="burkinaFaso" class="form-check-label">Burkina Faso</label><br>
+                    <input type="checkbox" name="countries[]" value="burundi" class="form-check-input">
+                    <label for="burundi" class="form-check-label">Burundi</label><br>
+                    <input type="checkbox" name="countries[]" value="caboVerde" class="form-check-input">
+                    <label for="caboVerde" class="form-check-label">Cabo Verde</label><br>
+                    <input type="checkbox" name="countries[]" value="cambodia" class="form-check-input">
+                    <label for="cambodia" class="form-check-label">Cambodia</label><br>
+                    <input type="checkbox" name="countries[]" value="cameroon" class="form-check-input">
+                    <label for="cameroon" class="form-check-label">Cameroon</label><br>
+                    <input type="checkbox" name="countries[]" value="centralAfrica" class="form-check-input">
+                    <label for="centralAfrica" class="form-check-label">Central Africa</label><br>
+                    <input type="checkbox" name="countries[]" value="republicChad" class="form-check-input">
+                    <label for="republicChad" class="form-check-label">Republic Chad</label><br>
+                    <input type="checkbox" name="countries[]" value="china" class="form-check-input">
+                    <label for="china" class="form-check-label">China</label><br>
+                    <input type="checkbox" name="countries[]" value="hongKongSAR" class="form-check-input">
+                    <label for="hongKongSAR" class="form-check-label">China, Hong Kong SAR</label><br>
+                    <input type="checkbox" name="countries[]" value="macaoSAR" class="form-check-input">
+                    <label for="macaoSAR" class="form-check-label">China, Macao SAR</label><br>
+                    <input type="checkbox" name="countries[]" value="colombia" class="form-check-input">
+                    <label for="colombia" class="form-check-label">Colombia</label><br>
+                    <input type="checkbox" name="countries[]" value="comoros" class="form-check-input">
+                    <label for="comoros" class="form-check-label">Comoros</label><br>
+                    <input type="checkbox" name="countries[]" value="congo" class="form-check-input">
+                    <label for="congo" class="form-check-label">Congo</label><br>
+                    <input type="checkbox" name="countries[]" value="coteD'lvoire" class="form-check-input">
+                    <label for="coteD'lvoire" class="form-check-label">Cote d'lvoire</label><br>
+                    <input type="checkbox" name="countries[]" value="democraticPeoplesRepublicOfKorea" class="form-check-input">
+                    <label for="democraticPeoplesRepublicOfKorea" class="form-check-label">Democratic People's Republic of Korea</label><br>
+                    <input type="checkbox" name="countries[]" value="democraticRepublicOfTheCongo" class="form-check-input">
+                    <label for="democraticRepublicOfTheCongo" class="form-check-label">Democratic Republic of the Congo</label><br>
+                    <input type="checkbox" name="countries[]" value="djibouti" class="form-check-input">
+                    <label for="djibouti" class="form-check-label">Djibouti</label><br>
+                    <input type="checkbox" name="countries[]" value="dominicanRepublic" class="form-check-input">
+                    <label for="dominicanRepublic" class="form-check-label">Dominican Republic</label><br>
+                </div>
+                <div id="countryList" class="form-check col">
+                    <input type="checkbox" name="countries[]" value="ecuador" class="form-check-input">
+                    <label for="ecuador" class="form-check-label">Ecuador</label><br>
+                    <input type="checkbox" name="countries[]" value="elSalvador" class="form-check-input">
+                    <label for="elSalvador" class="form-check-label">El Salvador</label><br>
+                    <input type="checkbox" name="countries[]" value="equatorialGuinea" class="form-check-input">
+                    <label for="equatorialGuinea" class="form-check-label">Equatorial Guinea</label><br>
+                    <input type="checkbox" name="countries[]" value="eritrea" class="form-check-input">
+                    <label for="eritrea" class="form-check-label">Eritrea</label><br>
+                    <input type="checkbox" name="countries[]" value="eswatini" class="form-check-input">
+                    <label for="eswatini" class="form-check-label">Eswatini</label><br>
+                    <input type="checkbox" name="countries[]" value="ethiopia" class="form-check-input">
+                    <label for="ethiopia" class="form-check-label">Ethiopia</label><br>
+                    <input type="checkbox" name="countries[]" value="fiji" class="form-check-input">
+                    <label for="fiji" class="form-check-label">Fiji</label><br>
+                    <input type="checkbox" name="countries[]" value="gabon" class="form-check-input">
+                    <label for="gabon" class="form-check-label">Gabon</label><br>
+                    <input type="checkbox" name="countries[]" value="gambia" class="form-check-input">
+                    <label for="gambia" class="form-check-label">Gambia</label><br>
+                    <input type="checkbox" name="countries[]" value="georgia" class="form-check-input">
+                    <label for="georgia" class="form-check-label">Georgia</label><br>
+                    <input type="checkbox" name="countries[]" value="ghana" class="form-check-input">
+                    <label for="ghana" class="form-check-label">Ghana</label><br>
+                    <input type="checkbox" name="countries[]" value="greenland" class="form-check-input">
+                    <label for="greenland" class="form-check-label">Greenland</label><br>
+                    <input type="checkbox" name="countries[]" value="guam" class="form-check-input">
+                    <label for="guam" class="form-check-label">Guam</label><br>
+                    <input type="checkbox" name="countries[]" value="guatemala" class="form-check-input">
+                    <label for="guatemala" class="form-check-label">Guatemala</label><br>
+                    <input type="checkbox" name="countries[]" value="guinea" class="form-check-input">
+                    <label for="guinea" class="form-check-label">Guinea</label><br>
+                    <input type="checkbox" name="countries[]" value="guineaBissau" class="form-check-input">
+                    <label for="guineaBissau" class="form-check-label">Guinea Bissau</label><br>
+                    <input type="checkbox" name="countries[]" value="guyana" class="form-check-input">
+                    <label for="guyana" class="form-check-label">Guyana</label><br>
+                    <input type="checkbox" name="countries[]" value="haiti" class="form-check-input">
+                    <label for="haiti" class="form-check-label">Haiti</label><br>
+                    <input type="checkbox" name="countries[]" value="honduras" class="form-check-input">
+                    <label for="honduras" class="form-check-label">Honduras</label><br>
+                    <input type="checkbox" name="countries[]" value="india" class="form-check-input">
+                    <label for="india" class="form-check-label">India</label><br>
+                    <input type="checkbox" name="countries[]" value="indonesia" class="form-check-input">
+                    <label for="indonesia" class="form-check-label">Indonesia</label><br>
+                    <input type="checkbox" name="countries[]" value="iraq">
+                    <label for="iraq" class="form-check-label">Iraq</label><br>
+                    <input type="checkbox" name="countries[]" value="kazakhstan" class="form-check-input">
+                    <label for="kazakhstan" class="form-check-label">Kazakhstan</label><br>
+                    <input type="checkbox" name="countries[]" value="kenya" class="form-check-input">
+                    <label for="kenya" class="form-check-label">Kenya</label><br>
+                    <input type="checkbox" name="countries[]" value="kiribai" class="form-check-input">
+                    <label for="kiribai" class="form-check-label">Kiribai</label><br>
+                    <input type="checkbox" name="countries[]" value="kuwait" class="form-check-input">
+                    <label for="kuwait" class="form-check-label">Kuwait</label><br>
+                    <input type="checkbox" name="countries[]" value="kyrgyzstan" class="form-check-input">
+                    <label for="kyrgyzstan" class="form-check-label">Kyrgyzstan</label><br>
+                    <input type="checkbox" name="countries[]" value="lao" class="form-check-input">
+                    <label for="lao" class="form-check-label">Lao</label><br>
+                    <input type="checkbox" name="countries[]" value="peoplesDemocraticRepublic" class="form-check-input">
+                    <label for="peoplesDemocraticRepublic" class="form-check-label">People's Democratic Republic</label><br>
+                    <input type="checkbox" name="countries[]" value="lesotho" class="form-check-input">
+                    <label for="lesotho" class="form-check-label">Lesotho</label><br>
+                    <input type="checkbox" name="countries[]" value="liberia" class="form-check-input">
+                    <label for="liberia" class="form-check-label">Liberia</label><br>
+                    <input type="checkbox" name="countries[]" value="libya">
+                    <label for="libya" class="form-check-label">Libya</label><br>
+                    <input type="checkbox" name="countries[]" value="lithuania" class="form-check-input">
+                    <label for="lithuania" class="form-check-label">Lithuania</label><br>
+                    <input type="checkbox" name="countries[]" value="madagascar" class="form-check-input">
+                    <label for="madagascar" class="form-check-label">Madagascar</label><br>
+                    <input type="checkbox" name="countries[]" value="malawi" class="form-check-input">
+                    <label for="malawi" class="form-check-label">Malawi</label><br>
+                    <input type="checkbox" name="countries[]" value="malaysia" class="form-check-input">
+                    <label for="malaysia" class="form-check-label">Malaysia</label><br>
+                </div>
+                <div id="countryList" class="form-check col">
+                    <input type="checkbox" name="countries[]" value="maldives" class="form-check-input">
+                    <label for="maldives" class="form-check-label">Maldives</label><br>
+                    <input type="checkbox" name="countries[]" value="mali" class="form-check-input">
+                    <label for="mali" class="form-check-label">Mali</label><br>
+                    <input type="checkbox" name="countries[]" value="marshallIsland" class="form-check-input">
+                    <label for="marshallIsland" class="form-check-label">Marshall Island</label><br>
+                    <input type="checkbox" name="countries[]" value="mauritania" class="form-check-input">
+                    <label for="mauritania" class="form-check-label">Mauritania</label><br>
+                    <input type="checkbox" name="countries[]" value="mexico" class="form-check-input">
+                    <label for="mexico" class="form-check-label">Mexico</label><br>
+                    <input type="checkbox" name="countries[]" value="micronesia" class="form-check-input">
+                    <label for="micronesia" class="form-check-label">Micronesia</label><br>
+                    <input type="checkbox" name="countries[]" value="mongolia" class="form-check-input">
+                    <label for="mongolia" class="form-check-label">Mongolia</label><br>
+                    <input type="checkbox" name="countries[]" value="morocco" class="form-check-input">
+                    <label for="morocco" class="form-check-label">Morocco</label><br>
+                    <input type="checkbox" name="countries[]" value="mozambique" class="form-check-input">
+                    <label for="mozambique" class="form-check-label">Mozambique</label><br>
+                    <input type="checkbox" name="countries[]" value="myanmar" class="form-check-input">
+                    <label for="myanmar" class="form-check-label">Myanmar</label><br>
+                    <input type="checkbox" name="countries[]" value="namibia" class="form-check-input">
+                    <label for="namibia" class="form-check-label">Namibia</label><br>
+                    <input type="checkbox" name="countries[]" value="nauru" class="form-check-input">
+                    <label for="nauru" class="form-check-label">Nauru</label><br>
+                    <input type="checkbox" name="countries[]" value="nepal" class="form-check-input">
+                    <label for="nepal" class="form-check-label">Nepal</label><br>
+                    <input type="checkbox" name="countries[]" value="nicaragua" class="form-check-input">
+                    <label for="nicaragua" class="form-check-label">Nicaragua</label><br>
+                    <input type="checkbox" name="countries[]" value="niger" class="form-check-input">
+                    <label for="niger" class="form-check-label">Niger</label><br>
+                    <input type="checkbox" name="countries[]" value="nigeria" class="form-check-input">
+                    <label for="nigeria" class="form-check-label">Nigeria</label><br>
+                    <input type="checkbox" name="countries[]" value="niue" class="form-check-input">
+                    <label for="niue" class="form-check-label">Niue</label><br>
+                    <input type="checkbox" name="countries[]" value="northernMarianaIslands" class="form-check-input">
+                    <label for="northernMarianaIslands" class="form-check-label">Northern Mariana Islands</label><br>
+                    <input type="checkbox" name="countries[]" value="pakistan" class="form-check-input">
+                    <label for="pakistan" class="form-check-label">Pakistan</label><br>
+                    <input type="checkbox" name="countries[]" value="palau" class="form-check-input">
+                    <label for="palau" class="form-check-label">Palau</label><br>
+                    <input type="checkbox" name="countries[]" value="panama" class="form-check-input">
+                    <label for="panama" class="form-check-label">Panama</label><br>
+                    <input type="checkbox" name="countries[]" value="papuaNewGuinea" class="form-check-input">
+                    <label for="papuaNewGuinea" class="form-check-label">Papua New Guinea</label><br>
+                    <input type="checkbox" name="countries[]" value="paraguay" class="form-check-input">
+                    <label for="paraguay" class="form-check-label">Paraguay</label><br>
+                    <input type="checkbox" name="countries[]" value="peru" class="form-check-input">
+                    <label for="peru" class="form-check-label">Peru</label><br>
+                    <input type="checkbox" name="countries[]" value="philippines" class="form-check-input">
+                    <label for="philippines" class="form-check-label">Philippines</label><br>
+                    <input type="checkbox" name="countries[]" value="qatar" class="form-check-input">
+                    <label for="qatar" class="form-check-label">Qatar</label><br>
+                    <input type="checkbox" name="countries[]" value="republicOfKorea" class="form-check-input">
+                    <label for="republicOfKorea" class="form-check-label">Republic of Korea</label><br>
+                    <input type="checkbox" name="countries[]" value="republicOfMoldova" class="form-check-input">
+                    <label for="republicOfMoldova" class="form-check-label">Republic of Moldova</label><br>
+                    <input type="checkbox" name="countries[]" value="romania" class="form-check-input">
+                    <label for="romania" class="form-check-label">Romania</label><br>
+                    <input type="checkbox" name="countries[]" value="russianFederation" class="form-check-input">
+                    <label for="russianFederation" class="form-check-label">Russian Federation</label><br>
+                    <input type="checkbox" name="countries[]" value="rwanda" class="form-check-input">
+                    <label for="rwanda" class="form-check-label">Rwanda</label><br>
+                    <input type="checkbox" name="countries[]" value="saoTomeAndPrincipe" class="form-check-input">
+                    <label for="saoTomeAndPrincipe" class="form-check-label">Sao Tome and Principe</label><br>
+                    <input type="checkbox" name="countries[]" value="senegal" class="form-check-input">
+                    <label for="senegal" class="form-check-label">Senegal</label><br>
+                    <input type="checkbox" name="countries[]" value="sierraLeone" class="form-check-input">
+                    <label for="sierraLeone" class="form-check-label">Sierra Leone</label><br>
+                    <input type="checkbox" name="countries[]" value="singapore" class="form-check-input">
+                    <label for="singapore" class="form-check-label">Singapore</label><br>
+                    <input type="checkbox" name="countries[]" value="none" class="form-check-input">
+                    <label for="none" class="form-check-label">None of the Above</label><br>
+                </div>
+            <div class="d-flex justify-content-center">
+                <button class="btn btn-primary btn-lg" type="submit" value="submit">Submit Survey</button>
+            </div><br>
+        </div>
+    </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="surveyScript.js"></script>
+    <script src="server.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+#loginForm{
+    background-image: url(COB.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 965px;
+    margin-top: 350px;
+}
+
+.wrapper {
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.form-signin {
+	max-width: 380px;
+	padding: 10px 35px 45px;
+	margin: 0 auto;
+	background-color: whitesmoke;
+	border: 5px solid black;
+}
+
+.form-signin .form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+.form-signin input[type="text"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-top: .5in;
+}
+
+.form-signin input[type="password"] {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#tbSurveyForm{
+	background-color: whitesmoke;
+	
+}
+
+.container{
+	background-color: lightgray;
+	padding: 1in;
+}
+
+#surveyHeader{
+	text-align: center;
+	padding-bottom: 50px;
+	padding-top: 40px;
+}
+
+.btn-primary{
+	margin-top: 60px;
+	margin-bottom: 30px;
+}
+
+#countryList{
+	margin-left: 1in;
+}
+
